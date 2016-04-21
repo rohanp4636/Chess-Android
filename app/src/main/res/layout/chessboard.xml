@@ -15,7 +15,6 @@
         android:layout_height="wrap_content"
         android:numColumns="8"
         android:padding="0dp"
-        android:background="#ea2e49"
         android:layout_weight="1"
 
         />

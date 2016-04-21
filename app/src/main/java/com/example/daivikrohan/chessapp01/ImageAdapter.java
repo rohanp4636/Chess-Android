@@ -6,23 +6,31 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.FrameLayout;
+import android.widget.GridView;
 
 /**
  *
  */
 public class ImageAdapter extends BaseAdapter {
-    FrameLayout frameLayout;
-    private Context mContext;
+    private Context ct;
     private LayoutInflater inflater;
 
     //this array stores the squares for the chess board.
-    private Integer boardID[] ={};
+    private Integer[] boardID={
+            R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,
+            R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare,
+            R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,
+            R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare,
+            R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,
+            R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare,
+            R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,
+            R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare
+    };
 
 
     public ImageAdapter(Context c) {
-        this.mContext = c;
-        this.frameLayout = null;
-        this.inflater = null;
+        this.ct = c;
+        inflater = LayoutInflater.from(this.ct);
     }
 
     public int getCount() {
@@ -39,6 +47,7 @@ public class ImageAdapter extends BaseAdapter {
 
     public View getView(int position, View convertView, ViewGroup parent) {
         View BoardSquare = convertView;
+
         if(BoardSquare == null){
             BoardSquare = inflater.inflate(R.layout.chesspiece,null);
             BoardSquarePiece bsp = new BoardSquarePiece( position,boardID, BoardSquare);
