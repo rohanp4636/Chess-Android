@@ -7,5 +7,7 @@
     <string name="play">Play Chess</string>
     <string name="replay">Replay a Previous Game</string>
     <string name="next">Next Move</string>
+    <string name = "listGame">Recorded Games:</string>
+
 
 </resources>

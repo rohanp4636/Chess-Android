@@ -38,12 +38,13 @@ public class ImageAdapter extends BaseAdapter {
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
-        if(convertView == null){
-            convertView = inflater.inflate(R.layout.chesspiece,null);
-            BoardSquarePiece bsp = new BoardSquarePiece( position,boardID, convertView);
-            convertView.setTag(bsp);
-            return convertView;
+        View BoardSquare = convertView;
+        if(BoardSquare == null){
+            BoardSquare = inflater.inflate(R.layout.chesspiece,null);
+            BoardSquarePiece bsp = new BoardSquarePiece( position,boardID, BoardSquare);
+            BoardSquare.setTag(bsp);
+            return BoardSquare;
         }
-        return convertView;
+        return BoardSquare;
     }
 }

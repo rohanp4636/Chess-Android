@@ -5,14 +5,19 @@
     android:layout_height="match_parent">
 
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/gamesText"
-        android:text="List of all  Games" />
+        android:text="@string/listGame"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"/>
+
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/listOfGames" />
+
 </LinearLayout>
