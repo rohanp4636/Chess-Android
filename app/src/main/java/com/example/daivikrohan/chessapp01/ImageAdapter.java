@@ -15,6 +15,7 @@ public class ImageAdapter extends BaseAdapter {
     private Context ct;
     private LayoutInflater inflater;
 
+
     //this array stores the squares for the chess board.
     private Integer[] boardID={
             R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,  R.drawable.lightsquare, R.drawable.darksquare,
