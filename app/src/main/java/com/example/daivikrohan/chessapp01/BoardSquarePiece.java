@@ -14,12 +14,17 @@ public class BoardSquarePiece {
         this.boardPos = pos;
         this.background = (ImageView) context.findViewById(R.id.chessTile);
         this.background.setImageResource(board[pos]);
-            if(pos == 0){
-                this.background.setImageResource(R.drawable.movesquare);
-            }
         this.chessPiece = (ImageView) context.findViewById(R.id.chessPiece);
         this.chessPiece.setImageResource(getPosition(pos));
-        //set resource for both
+
+    }
+
+    public int getPos(){
+        return this.boardPos;
+    }
+
+    public void setPos(int x){
+        this.boardPos = x;
     }
 
     public static int getPosition(int pos){
