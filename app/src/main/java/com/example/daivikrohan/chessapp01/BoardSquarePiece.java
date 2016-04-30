@@ -8,11 +8,20 @@ public class BoardSquarePiece {
     public ImageView background;
     public ImageView chessPiece;
     int boardPos;
+    int oldBack;
+    boolean isLight;
 
 
     public BoardSquarePiece(int pos, Integer[] board, View context){
         this.boardPos = pos;
         this.background = (ImageView) context.findViewById(R.id.chessTile);
+        this.oldBack = board[pos];
+        if(board[pos] == R.drawable.lightsquare){
+            isLight = true;
+        }
+        else{
+            isLight = false;
+        }
         this.background.setImageResource(board[pos]);
         this.chessPiece = (ImageView) context.findViewById(R.id.chessPiece);
         this.chessPiece.setImageResource(getPosition(pos));
