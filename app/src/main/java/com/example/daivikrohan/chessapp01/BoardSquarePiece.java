@@ -8,6 +8,7 @@ public class BoardSquarePiece {
     public ImageView background;
     public ImageView chessPiece;
     int boardPos;
+    int piece;
     int oldBack;
     boolean isLight;
 
@@ -25,6 +26,7 @@ public class BoardSquarePiece {
         this.background.setImageResource(board[pos]);
         this.chessPiece = (ImageView) context.findViewById(R.id.chessPiece);
         this.chessPiece.setImageResource(getPosition(pos));
+        this.piece = getPosition(pos);
 
     }
 
