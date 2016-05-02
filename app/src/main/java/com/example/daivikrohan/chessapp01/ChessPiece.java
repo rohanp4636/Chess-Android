@@ -110,7 +110,7 @@ public abstract class ChessPiece {
 					}
 				}
 			}
-			
+
 			chessBoard.board[row][col] = this;
 			chessBoard.board[this.row][this.column] = null;
 			
@@ -119,9 +119,10 @@ public abstract class ChessPiece {
 			this.moved = 1;
 			for(int i = 0; i < 8; i++){
 				for(int j = 0; j < 8; j++){
-					if(chessBoard.board[i][j] != null && chessBoard.board[i][j] instanceof pawn && ( i != this.row && j != this.column) ){
+					if(chessBoard.board[i][j] != null && chessBoard.board[i][j] instanceof pawn && chessBoard.board[i][j] != this ){
 						((pawn)chessBoard.board[i][j]).canPassant = false;
 					}
+
 				}
 			}
 			if(this.color == 0){

@@ -24,6 +24,7 @@
     <string name = "confirmDraw">Are You Sure Your Want To Ask Draw?</string>
     <string name = "askDrawWhite">Player White Has Requested A Draw. Does Player Black Accept?</string>
     <string name = "askDrawBlack">Player Black Has Requested A Draw. Does Player White Accept?</string>
+    <string name = "saveMessage">Enter Game Title</string>
 
 
 

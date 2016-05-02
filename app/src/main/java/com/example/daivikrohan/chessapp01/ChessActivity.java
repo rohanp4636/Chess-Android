@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -434,18 +435,7 @@ public class ChessActivity extends AppCompatActivity {
             }
 
         }
-                        /*
-                        if(winner == 1){
-                            System.out.println("Black wins");
 
-                        }
-                        else if(winner == 0){
-                            System.out.println("White wins");
-                        }
-                        else{
-                            System.out.println("\nDraw");
-
-                        }*/
     }
 
     public void gameOver(int title, int message){
@@ -476,7 +466,33 @@ public class ChessActivity extends AppCompatActivity {
 
         builder.setPositiveButton(R.string.save, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-                // User clicked OK button
+                saveGame();
+            }
+        });
+        builder.setNegativeButton(R.string.home, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                onBackPressed();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.setCancelable(false);
+        dialog.show();
+    }
+
+    public void saveGame(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.save);
+        builder.setMessage(R.string.saveMessage);
+
+        final EditText et = new EditText(this);
+        builder.setView(et);
+
+        builder.setPositiveButton(R.string.save, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                String userInput = et.getText().toString();
+                //save the game
+
+                
             }
         });
         builder.setNegativeButton(R.string.home, new DialogInterface.OnClickListener() {
