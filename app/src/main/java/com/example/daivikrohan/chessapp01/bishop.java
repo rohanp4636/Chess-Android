@@ -95,7 +95,7 @@ public class bishop extends ChessPiece {
 		else return "w" + name + " ";
 	}
 
-    public bishop copy(){
+    public ChessPiece copy(){
         bishop b =  new bishop(this.color,this.row,this.column);
         b.moved = this.moved;
         b.isKillLocation = this.isKillLocation;

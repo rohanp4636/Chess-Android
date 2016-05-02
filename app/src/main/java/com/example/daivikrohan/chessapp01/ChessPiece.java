@@ -347,5 +347,7 @@ public abstract class ChessPiece {
 		return null;
 	}
 
+	public abstract ChessPiece copy();
+
 	
 }

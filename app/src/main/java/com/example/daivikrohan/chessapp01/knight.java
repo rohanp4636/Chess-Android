@@ -93,7 +93,7 @@ public class knight extends ChessPiece {
 		}
 		else return "w" + name +" ";
 	}
-	public knight copy(){
+	public ChessPiece copy(){
 		knight k = new knight(this.color,this.row,this.column);
 		k.moved = this.moved;
 		k.isKillLocation = this.isKillLocation;

@@ -100,7 +100,7 @@ public class king extends ChessPiece{
 			}
 			if(!Chess.whiteTurn && !Chess.blackCheck )
 			{
-				if( (chessBoard.board[0][0] != null && chessBoard.board[0][0] instanceof rook) && chessBoard.board[0][7].moved==0)
+				if( (chessBoard.board[0][0] != null && chessBoard.board[0][0] instanceof rook) && chessBoard.board[0][0].moved==0)
 				{
 					if(chessBoard.board[0][1]==null && chessBoard.board[0][2]==null && chessBoard.board[0][3]==null)
 					{
@@ -144,7 +144,7 @@ public class king extends ChessPiece{
 		else return "w" + name +" ";
 	}
 
-	public king copy(){
+	public ChessPiece copy(){
 		king k = new king(this.color,this.row,this.column);
 		k.moved = this.moved;
 		k.isKillLocation = this.isKillLocation;

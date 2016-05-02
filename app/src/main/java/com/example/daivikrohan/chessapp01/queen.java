@@ -142,7 +142,7 @@ public class queen extends ChessPiece {
 		else return "w" + name +" ";
 	}
 
-	public queen copy(){
+	public ChessPiece copy(){
 		queen q = new queen(this.color,this.row,this.column);
 		q.moved = this.moved;
 		q.isKillLocation = this.isKillLocation;

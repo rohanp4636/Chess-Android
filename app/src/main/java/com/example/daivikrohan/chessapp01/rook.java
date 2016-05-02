@@ -92,7 +92,7 @@ public class rook extends ChessPiece {
 		else return "w" + name +" ";
 	}
 
-	public rook copy(){
+	public ChessPiece copy(){
 		rook r = new rook(this.color,this.row,this.column);
 		r.moved = this.moved;
 		r.isKillLocation = this.isKillLocation;

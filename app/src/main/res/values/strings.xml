@@ -8,6 +8,31 @@
     <string name="replay">Replay a Previous Game</string>
     <string name="next">Next Move</string>
     <string name = "listGame">Recorded Games:</string>
+    <string name = "promoteText">Choose Piece To Promote Pawn To.</string>
+    <string name = "whiteWin">White Wins!</string>
+    <string name = "blackWin">Black Wins!:</string>
+    <string name = "checkmate">Checkmate</string>
+    <string name = "whiteResign">White Resigns</string>
+    <string name = "blackResign">Black Resigns</string>
+    <string name = "stalemate">Stalemate</string>
+    <string name = "tie">Tie!</string>
+    <string name = "save">Save Game</string>
+    <string name = "home">Home</string>
+    <string name = "cancel">Cancel</string>
+    <string name = "confirm">Confirm</string>
+    <string name = "confirmresign">Are You Sure You Want To Resign?</string>
+    <string name = "confirmDraw">Are You Sure Your Want To Ask Draw?</string>
+    <string name = "askDrawWhite">Player White Has Requested A Draw. Does Player Black Accept?</string>
+    <string name = "askDrawBlack">Player Black Has Requested A Draw. Does Player White Accept?</string>
+
+
+
+    <string-array name="promotionPieces">
+        <item>Bishop</item>
+        <item>Knight</item>
+        <item>Queen</item>
+        <item>Rook</item>
+    </string-array>
 
 
 

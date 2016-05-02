@@ -32,7 +32,8 @@
             android:text="@string/ai"
             android:id="@+id/AIButton"
             android:layout_gravity="end"
-            android:layout_weight=".25" />
+            android:layout_weight=".25"
+            android:onClick="AIMove"/>
 
 
         <Button
@@ -41,7 +42,8 @@
             android:text="@string/draw"
             android:id="@+id/DrawButton"
             android:layout_gravity="end"
-            android:layout_weight=".25" />
+            android:layout_weight=".25"
+            android:onClick="drawGame"/>
 
         <Button
             android:layout_width="0dp"
@@ -49,7 +51,8 @@
             android:text="@string/resign"
             android:id="@+id/ResignButton"
             android:layout_gravity="center_horizontal"
-            android:layout_weight=".25" />
+            android:layout_weight=".25"
+            android:onClick="resignGame"/>
 
         <Button
             android:layout_width="0dp"
@@ -57,7 +60,8 @@
             android:text="@string/undo"
             android:id="@+id/UndoButton"
             android:layout_gravity="center_horizontal"
-            android:layout_weight=".25" />
+            android:layout_weight=".25"
+            android:onClick="undoMove"/>
 
     </LinearLayout>
 

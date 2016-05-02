@@ -65,7 +65,7 @@ public class pawn extends ChessPiece {
 			}
 			
 			if(moved == 0){
-				if(chessBoard.inBounds(this.row-2, this.column) && chessBoard.board[this.row-2][this.column] == null  ){
+				if(chessBoard.inBounds(this.row-2, this.column) && chessBoard.board[this.row-2][this.column] == null  && chessBoard.inBounds(this.row-1, this.column) && chessBoard.board[this.row-1][this.column] == null  ){
 					rs = addMove(this.row-2,this.column,chessBoard); //up two
 					if(rs != null){
 						moves.add(rs);
@@ -156,7 +156,7 @@ public class pawn extends ChessPiece {
 		else return "w" + name +" ";
 	}
 
-	public pawn copy(){
+	public ChessPiece copy(){
 		pawn p = new pawn(this.color,this.row,this.column);
 		p.moved = this.moved;
 		p.isKillLocation = this.isKillLocation;

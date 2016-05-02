@@ -127,5 +127,20 @@ public class ChessBoard {
 		}
 		return true;
 	}
-	
+
+	public ChessBoard cloneBoard() {
+        ChessBoard cb = new ChessBoard();
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if(this.board[i][j] == null){
+                    cb.board[i][j] = null;
+                }
+                else{
+                    cb.board[i][j] = this.board[i][j].copy();
+                }
+            }
+        }
+
+        return cb;
+    }
 }
