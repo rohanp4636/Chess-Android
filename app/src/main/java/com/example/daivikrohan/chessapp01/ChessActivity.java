@@ -13,6 +13,9 @@ import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -490,9 +493,53 @@ public class ChessActivity extends AppCompatActivity {
         builder.setPositiveButton(R.string.save, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 String userInput = et.getText().toString();
-                //save the game
+                if(userInput.equals("")){
+                    if(toast != null){
+                        toast.cancel();
+                    }
+                    toast = Toast.makeText(getApplicationContext(), "Enter A Game Name", Toast.LENGTH_SHORT);
+                    toast.show();
+                    saveGame();
 
-                
+                }
+                else {
+                    try {
+                        File file = getApplicationContext().getFilesDir();
+                        file = new File(file,"SavedGames/"+userInput.toLowerCase());
+                        if (file.exists()) {
+                            if (toast != null) {
+                                toast.cancel();
+                            }
+                            toast = Toast.makeText(getApplicationContext(), "Game With Given Name Already Exists.\nTry Again.", Toast.LENGTH_SHORT);
+                            toast.show();
+                            saveGame();
+                        } else {
+                            FileOutputStream fileOutputStream = new FileOutputStream(file);
+
+                            PrintWriter pw = new PrintWriter(fileOutputStream);
+                            for (String line : saveMoves) {
+                                pw.println(line);
+                            }
+                            pw.close();
+                            if (toast != null) {
+                                toast.cancel();
+                            }
+                            toast = Toast.makeText(getApplicationContext(), "Game Saved.", Toast.LENGTH_SHORT);
+                            toast.show();
+                            onBackPressed();
+                        }
+
+                    } catch (Exception e) {
+                        if (toast != null) {
+                            toast.cancel();
+                        }
+                        toast = Toast.makeText(getApplicationContext(), "Game With Given Name Already Exists.\nTry Again.", Toast.LENGTH_SHORT);
+                        toast.show();
+                        saveGame();
+                    }
+                }
+
+
             }
         });
         builder.setNegativeButton(R.string.home, new DialogInterface.OnClickListener() {

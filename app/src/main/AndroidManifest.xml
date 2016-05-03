@@ -9,7 +9,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,6 +19,16 @@
             android:name=".ChessActivity"
             >
         </activity>
+        <activity
+            android:name=".ReplayGame"
+            >
+        </activity>
+        <activity
+            android:name=".ReplayList"
+            >
+        </activity>
+
     </application>
+
 
 </manifest>

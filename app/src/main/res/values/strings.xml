@@ -25,6 +25,9 @@
     <string name = "askDrawWhite">Player White Has Requested A Draw. Does Player Black Accept?</string>
     <string name = "askDrawBlack">Player Black Has Requested A Draw. Does Player White Accept?</string>
     <string name = "saveMessage">Enter Game Title</string>
+    <string name = "sortname">Sort By Name</string>
+    <string name = "sortdate">Sort By Date</string>
+
 
 
 
