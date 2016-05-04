@@ -84,7 +84,7 @@ public class ReplayGame extends AppCompatActivity {
             }
             return false;  //promotion
         }
-        else if(input.matches("checkmate white") || input.matches("checkmate black") || input.matches("stalemate") || input.matches("resign white") || input.matches("resign black"))
+        else if(input.matches("checkmate white") || input.matches("checkmate black") || input.matches("stalemate") || input.matches("resign white") || input.matches("resign black") || input.matches("draw"))
         {
             gameOver(input);
             return true;
