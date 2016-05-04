@@ -21,7 +21,7 @@ public class queen extends ChessPiece {
 		super(color,x,y);
 	}
 	/**
-	 * listMoves method calculates all the moves the piece can make based on the attributes of piece. 
+	 * listMoves method calculates all the  moves the piece can make based on the attributes of piece.
 	 * @param chessBoard 	The Chess board. Used to see what pieces are on the board and based on the movement of the player it utilized the board to see where the piece can move. 
 	 * @return ArrayList<String> moves 	- List of all possible moves by the piece
 	 * 
