@@ -67,21 +67,18 @@ public class ReplayList extends AppCompatActivity {
                 try{
                     FileInputStream fileInputStream = new FileInputStream(gameFile);
                     BufferedReader br = new BufferedReader(new InputStreamReader(fileInputStream));
-                    String moves = "";
+                    ArrayList<String> moves = new ArrayList<String>();
+
+
                     String tmp = "";
                     while ((tmp = br.readLine()) != null) {
-                        if(moves.isEmpty()){
-                            moves = tmp;
-                        }
-                        else{
-                            moves = moves +"_"+ tmp;
-                        }
+                       moves.add(tmp);
                     }
                     br.close();
                     fileInputStream.close();
 
                     Intent i = new Intent(ReplayList.this,ReplayGame.class);
-                    i.putExtra("GameMoveList", moves);
+                    i.putStringArrayListExtra("GameMoveList", moves);
                     startActivityForResult(i, 0);
                 }
                 catch (Exception e){

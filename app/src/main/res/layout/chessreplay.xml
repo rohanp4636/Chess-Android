@@ -10,7 +10,7 @@
     android:weightSum="1">
 
     <GridView
-        android:id="@+id/GridView"
+        android:id="@+id/GridViewReplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:numColumns="8"
@@ -31,9 +31,8 @@
             android:text="@string/next"
             android:id="@+id/NextButton"
             android:layout_gravity="end"
+            android:onClick="nextMove"
             android:layout_weight="1" />
-
-
 
     </LinearLayout>
 

@@ -27,6 +27,7 @@
     <string name = "saveMessage">Enter Game Title</string>
     <string name = "sortname">Sort By Name</string>
     <string name = "sortdate">Sort By Date</string>
+    <string name = "list">Replay A Different Game</string>
 
 
 
