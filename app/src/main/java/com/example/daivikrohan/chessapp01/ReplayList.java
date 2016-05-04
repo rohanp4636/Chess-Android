@@ -46,7 +46,6 @@ public class ReplayList extends AppCompatActivity {
             if(file.exists()){
                 for(File game : file.listFiles()){
                     files.add(game);
-
                 }
             }
 
@@ -86,7 +85,16 @@ public class ReplayList extends AppCompatActivity {
                     startActivityForResult(i, 0);
                 }
                 catch (Exception e){
-                    Toast toast = Toast.makeText(getApplicationContext(),"File Is Corrupted.\nIt Will Be Deleted.",Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(getApplicationContext(),"File Can't Be Opened.",Toast.LENGTH_SHORT);
+                    toast.show();
+                    if(files.size() > index && listItems.size() > index) {
+                        if (files.get(index).exists()) {
+                            files.get(index).delete();
+                        }
+                        files.remove(index);
+                        listItems.remove(index);
+                        gameList.setAdapter(new ArrayAdapter<String>(getApplicationContext(), R.layout.filelist, listItems));
+                    }
                 }
 
             }
